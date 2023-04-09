@@ -46,17 +46,43 @@ a {
     opacity: 0.8;
 }
 
+/* .line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+} */
+
 /* =============Header============== */
-.header {
+.header-fixed {
+    background: #e6f0ff;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     background: #e6f0ff;
-    height: 100vh;
+    height: calc(100vh - 97px);
 }
 
 .nav-bar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    /* padding-top: 38px; */
+    padding: 12px 0;
+    /* position: fixed; Set the navbar to fixed position */
+    /* top: 0; Position the navbar at the top of the page */
+    width: 100%;
+    background: #e6f0ff;
+}
+
+.besnik-logo:hover {
 }
 
 .nav-bar ul {
@@ -91,15 +117,15 @@ a {
     border-radius: 8px;
 }
 
-.hero {
+/* .hero {
     margin-top: 130px;
-}
+} */
 
-.hero .info {
+.hero-wrap .info {
     width: 51%;
 }
 
-.hero .sub-title {
+.hero-wrap .sub-title {
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -107,7 +133,7 @@ a {
     color: #687690;
 }
 
-.hero .title {
+.hero-wrap .title {
     margin-top: 8px;
     font-weight: 700;
     font-size: 6.4rem;
@@ -116,7 +142,7 @@ a {
     color: #000336;
 }
 
-.hero .desc {
+.hero-wrap .desc {
     margin-top: 30px;
     font-weight: 400;
     font-size: 1.8rem;
@@ -126,7 +152,7 @@ a {
     color: #5a6473;
 }
 
-.hero .btn {
+.hero-wrap .btn {
     margin-top: 40px;
     min-width: 170px;
 }
@@ -159,11 +185,23 @@ a {
     margin-top: 23px;
 }
 
-.logos {
+.clients .logos {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 102.5px;
+    margin-top: 70px;
+}
+
+.clients .logos a {
+    display: flex;
+    align-items: center;
+    height: 91px;
+    padding: 0 41px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.logos a:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 /* ================How it works===================== */
 .box-how1 {
@@ -298,8 +336,15 @@ a {
     justify-content: space-between;
     margin-top: 70px;
 }
+
 .cards-list .info {
     margin-left: 20px;
+}
+
+.featured .sub-card {
+    box-shadow: 0px 65px 80px -46px rgba(226, 238, 249, 0.6);
+    border-radius: 12px;
+    background: #ffffff;
 }
 
 .featured .sub-card .house-name {
@@ -323,6 +368,7 @@ a {
     align-items: center;
     margin-right: 40px;
     margin-top: 21px;
+    margin-bottom: 22px;
     font-weight: 500;
     font-size: 1.4rem;
     color: #444444;
